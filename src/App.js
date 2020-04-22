@@ -33,7 +33,9 @@ const List = () => (
   )
 )
 
-const App = () => (
+const App = () => {
+  
+  return (
     <div>
       <h1>
         My Hacker Stories
@@ -45,6 +47,7 @@ const App = () => (
       
       <List />
     </div>
-);
+    );
+};
 
 export default App;
