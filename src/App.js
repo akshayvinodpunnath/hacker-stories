@@ -34,6 +34,8 @@ const App = () => {
     },
   ];
 
+  const [searchTerm, setSearchTerm] = React.useState('');
+
   const handleChange = (event) => {
     console.log(event.target.value);
   }
