@@ -41,7 +41,7 @@ const App = () => {
   };
 
   const searchedStores = stories.filter(function(story) {
-    return story.title.includes(searchTerm)
+    return story.title.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
   })
 
   return (
