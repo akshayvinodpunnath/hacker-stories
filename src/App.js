@@ -40,9 +40,9 @@ const App = () => {
     setSearchTerm(event.target.value);
   };
 
-  const searchedStores = stories.filter(function(story) {
-    return story.title.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
-  })
+  const searchedStores = stories.filter(story =>
+    story.title.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+  )
 
   return (
     <div>
