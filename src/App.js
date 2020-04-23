@@ -40,6 +40,10 @@ const App = () => {
     setSearchTerm(event.target.value);
   };
 
+  const searchedStores = stories.filter(function(story) {
+    return story.title.includes(searchTerm)
+  })
+
   return (
     <div>
       <h1>
@@ -53,7 +57,7 @@ const App = () => {
 
       <hr />
       
-      <List list={stories}/>
+      <List list={searchedStores}/>
     </div>
     );
 };
