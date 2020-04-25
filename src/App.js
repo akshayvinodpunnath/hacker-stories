@@ -1,9 +1,9 @@
 import React from 'react';
 
 const List = ({list}) => (
-  list.map(item => (
+  list.map(({objectID,...item}) => (
   <Item 
-    key={item.objectID} 
+    key={objectID} 
     {...item}
     /> 
     )
