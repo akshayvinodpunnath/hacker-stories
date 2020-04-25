@@ -41,10 +41,14 @@ const App = () => {
     },
   ];
 
-  const [searchTerm, setSearchTerm] = React.useState('React');
+  const [searchTerm, setSearchTerm] = React.useState(
+    localStorage.getItem('search')||'React'
+  );
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
+    
+    localStorage.setItem('search',event.target.value);
   };
 
   const searchedStores = stories.filter(story =>
