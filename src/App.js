@@ -45,10 +45,12 @@ const App = () => {
     localStorage.getItem('search')||'React'
   );
 
+  React.useEffect(() => {
+    localStorage.setItem('search',searchTerm);
+  },[searchTerm]);
+
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
-    
-    localStorage.setItem('search',event.target.value);
   };
 
   const searchedStores = stories.filter(story =>
