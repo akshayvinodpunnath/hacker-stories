@@ -77,6 +77,7 @@ const InputWithLabel = ({
       id={id}
       type={type}
       value={value}
+      autoFocus
       onChange={onInputChange}
     />
   </>
